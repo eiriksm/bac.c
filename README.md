@@ -3,6 +3,10 @@ Blood Alcohol Content API in C.
 
 [![Test](https://github.com/eiriksm/bac.c/actions/workflows/test.yml/badge.svg)](https://github.com/eiriksm/bac.c/actions/workflows/test.yml)
 
+## Description
+
+Some useful helpers based on the Widmark formula. This formula uses the magic constants 0.55 for women and 0.68 for men. This formula can vary between countries or sources, and it's therefore only included by default, and can be overridden.
+
 ## Usage
 
 ```c
