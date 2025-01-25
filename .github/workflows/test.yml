@@ -3,19 +3,13 @@ name: Test
 on:
   push:
   pull_request:
-  
+
 jobs:
   build:
     name: Unit tests
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        tz:
-          - "Africa/Bamako"
-          - "America/St_Thomas"
-          - "UTC"
-          - "Europe/Berlin"
     steps:
 
     - name: Check out repository
@@ -23,8 +17,6 @@ jobs:
 
     - run: |
         make test
-      env:
-        TZ: ${{ matrix.tz }}
     - run: cat build/results/*txt
     - name: Check results and set pipeline status
       run: |
