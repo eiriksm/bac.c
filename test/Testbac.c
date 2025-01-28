@@ -8,10 +8,12 @@ void tearDown(void) {
 }
 
 void test_get_bac_cases_for_men(void) {
-  int num_cases = 2;
-  float cases[2][6] = {
+  int num_cases = 4;
+  float cases[4][6] = {
     { 70.0, 19.0, 1737831600, 1737843960, 0.0},
     { 94.0, 38.0, 1737831600, 1737835200, 0.44},
+    { 95.0, 19, 0, 0, 0.29},
+    { 95.0, 19, 0, 3600, 0.14},
   };
   for (int i = 0; i < num_cases; i++) {
     float weight = cases[i][0];
